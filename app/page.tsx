@@ -46,7 +46,7 @@ const StatBadge = ({ value, label }: { value: string; label: string }) => (
   </div>
 );
 
-const APK_URL = "https://storage.googleapis.com/mjfgvk/Linga%20Play.apk";
+const APK_URL = "https://raw.githubusercontent.com/nawrizbey/school_quiz/25cac9fc3d1c9bc0ee5477f689d35e18ec54838b/Linga%20Play.apk";
 
 export default function LingaPlayLanding() {
   const [downloaded, setDownloaded] = useState(false);
