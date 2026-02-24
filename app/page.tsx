@@ -46,6 +46,8 @@ const StatBadge = ({ value, label }: { value: string; label: string }) => (
   </div>
 );
 
+const APK_URL = "https://storage.googleapis.com/mjfgvk/Linga%20Play.apk";
+
 export default function LingaPlayLanding() {
   const [downloaded, setDownloaded] = useState(false);
   const [particles, setParticles] = useState<{id: number; x: number; y: number; size: number; delay: number; speed: number}[]>([]);
@@ -64,6 +66,13 @@ export default function LingaPlayLanding() {
 
   const handleDownload = () => {
     setDownloaded(true);
+    // Trigger actual APK download
+    const link = document.createElement("a");
+    link.href = APK_URL;
+    link.download = "LingaPlay.apk";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     setTimeout(() => setDownloaded(false), 3000);
   };
 
@@ -394,8 +403,7 @@ export default function LingaPlayLanding() {
               color: "#a5b4fc", padding: "12px 28px", borderRadius: "12px",
               fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: "14px",
               cursor: "pointer", transition: "all 0.3s",
-            }}
-            >
+            }}>
               Open Teacher Dashboard →
             </button>
           </div>
