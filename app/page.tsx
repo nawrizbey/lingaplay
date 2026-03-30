@@ -46,7 +46,7 @@ const StatBadge = ({ value, label }: { value: string; label: string }) => (
   </div>
 );
 
-const APK_URL = "YOUR_APK_DOWNLOAD_URL_HERE"; // <-- APK linkini shu yerga qo'y
+const APK_URL = "https://pylknjkzuhtyrgzvomfc.supabase.co/storage/v1/object/public/files/app-debug.apk"; // <-- APK linkini shu yerga qo'y
 
 export default function GreenTechHorizonsLanding() {
   const [downloaded, setDownloaded] = useState(false);
